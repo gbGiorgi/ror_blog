@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   }
   get '/u/:id', to: 'users#profile', as: 'user'
 
+  delete 'user_destroy', to: 'destroy_users#destroy'
   # /post/1/comments/4
   resources :posts do
     resources :comments
